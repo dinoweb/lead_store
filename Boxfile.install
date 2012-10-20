@@ -13,9 +13,9 @@ web1:
     - image/
     - install/
   after_build:
+    - "mv pagoda/system/database/mysql.php system/database/mysql.php"
+    - "mv pagoda/admin/config.php admin/config.php"
     - "mv pagoda/config.php config.php"
-    - "mv pagoda/system/* system/"
-    - "mv pagoda/admin/* admin/"
   after_deploy:
     - "mkdir image/cache; cp -rv pagoda/image/cache/* image/cache/"
     - "mkdir image/data; cp -rv pagoda/image/data/* image/data/"
