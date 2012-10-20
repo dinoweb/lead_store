@@ -1,0 +1,19 @@
+web1:
+  name: openCart
+  php_extensions:
+    - mysql
+    - mcrypt
+    - curl
+    - zip
+    - gd
+  shared_writable_dirs:
+    - system/cache/
+    - system/logs/
+    - download/
+    - image/
+  after_build:
+    - "mv pagoda/config.php config.php"
+    - "mv pagoda/system/* system/"
+    - "mv pagoda/admin/* admin/"
+db1:
+  name: openCart
