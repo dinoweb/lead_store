@@ -4,6 +4,7 @@ admin/config.php
 !index.html
 
 download
+image/flags
 image/cache/*.jpg
 image/cache/data/*
 system/cache
