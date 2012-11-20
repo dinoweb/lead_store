@@ -1,8 +1,10 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
-$_['text_title']       = 'Assegno/Vaglia/Postepay';
-$_['text_instruction'] = 'Istruzioni per Assegno/Vaglia/Postepay';
-$_['text_payable']     = 'Paga a: ';
-$_['text_address']     = 'Indirizzo: ';
-$_['text_payment']     = 'Non appena riceveremo il pagamento, l\'ordine sar&agrave; evaso.';
+$_['text_title']       = 'Informazioi Assegno';
+$_['text_instruction'] = 'Per Assegno';
+$_['text_payable']     = 'Intestato a: ';
+$_['text_address']     = 'Invia a: ';
+$_['text_payment']     = 'Il tuo ordine non sar&agrave; avaso fino a ricevimento del pagamento.';
 ?>

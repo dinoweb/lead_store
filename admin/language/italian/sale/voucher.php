@@ -19,6 +19,7 @@ $_['column_date_added']    = 'Data Inserimento';
 $_['column_status']        = 'Stato';
 $_['column_order_id']   = 'ID Ordine';
 $_['column_customer']   = 'Cliente';
+$_['column_date_added'] = 'Data creazione';
 $_['column_action']     = 'Azione';
 
 // Entry
@@ -39,4 +40,6 @@ $_['error_to_name']        = 'Il Nome del Destinatario deve essere lungo dai 1 a
 $_['error_from_name']      = 'Il tuo Nome deve essere dai 1 ai 64 caratteri!';
 $_['error_email']          = 'L\'indirizzo E-Mail non sembra essere valido!';
 $_['error_amount']         = 'La Quantit&agrave; deve essere superiore o uguale a 1!';
+$_['error_warning']        = 'Attenzione non hai compilato tutti i campi!';
+
 ?>

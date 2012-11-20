@@ -1,17 +1,17 @@
 <?php
 // Heading 
-$_['heading_title']  = 'Cambia Password';
+$_['heading_title']  = 'CAmbio Password';
 
 // Text
 $_['text_account']   = 'Account';
-$_['text_password']  = 'La Tua Password';
-$_['text_success']   = 'Successo: La tua password &egrave; stata correttamente aggiornata.';
+$_['text_password']  = 'Password';
+$_['text_success']   = 'La tua password &egrave; stata aggiornata correttamente.';
 
 // Entry
 $_['entry_password'] = 'Password:';
-$_['entry_confirm']  = 'Conferma Password:';
+$_['entry_confirm']  = 'conferma Password:';
 
 // Error
-$_['error_password'] = 'La Password deve essere compresa tra 3 e 20 caratteri!';
-$_['error_confirm']  = 'La Password di conferma non corrisponde con la password!';
+$_['error_password'] = 'La password deve contenere tra i 2 e i 20 caratteri!';
+$_['error_confirm']  = 'Le password non coincidono!';
 ?>

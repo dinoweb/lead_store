@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Locale
 $_['code']                  = 'it';
 $_['direction']             = 'ltr';
@@ -29,16 +31,17 @@ $_['button_checkout']       = 'Acquista';
 $_['button_confirm']        = 'Conferma Ordine';
 $_['button_coupon']         = 'Applica Sconto';
 $_['button_delete']         = 'Cancella';
+$_['button_download']       = 'Download';
 $_['button_edit']           = 'Modifica';
 $_['button_new_address']    = 'Nuovo indirizzo';
 $_['button_change_address'] = 'Cambia indirizzo';
-$_['button_add_product']    = 'Aggiungi prodotto';
-$_['button_remove']         = 'Rimuovi';
-$_['button_reviews']        = 'Reviews';
-$_['button_reorder']        = 'Riordina';
-$_['button_write']          = 'Scrivi una recensione';
+$_['button_reviews']        = 'Review';
+$_['button_write']          = 'Write Review';
 $_['button_login']          = 'Login';
-$_['button_update']         = 'Update';
+$_['button_update']         = 'Aggiorna';
+$_['button_remove']         = 'Elimina';
+$_['button_reorder']        = 'Riordina';
+$_['button_return']         = 'Reso';
 $_['button_shopping']       = 'Continua acquisti';
 $_['button_search']         = 'Cerca';
 $_['button_shipping']       = 'Applicare spedizione';
@@ -48,6 +51,7 @@ $_['button_voucher']        = 'Applica Voucher';
 $_['button_upload']         = 'Upload File';
 $_['button_reward']         = 'Applicare i punti';
 $_['button_quote']          = 'Ottieni citazioni';
+
 
 // Error
 $_['error_upload_1']        = 'Attenzione: il file caricato eccede la direttiva in php.ini!';

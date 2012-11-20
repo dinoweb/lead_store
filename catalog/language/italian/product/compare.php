@@ -1,23 +1,25 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
-$_['heading_title']     = 'Confronto dei Prodotti';
+$_['heading_title']     = 'Confronta Prodotti';
  
 // Text
-$_['text_product']      = 'Dettagli Prodotto';
-$_['text_name']         = 'Prodotto';
-$_['text_image']        = 'Immagine';
+$_['text_product']      = 'Dettaglio Prodotti';
+$_['text_name']         = 'Prodotti';
+$_['text_image']        = 'Foto';
 $_['text_price']        = 'Prezzo';
-$_['text_model']        = 'Modello';
-$_['text_manufacturer'] = 'Marchio';
+$_['text_model']        = 'Codice';
+$_['text_manufacturer'] = 'Marca';
 $_['text_availability'] = 'Disponibilit&agrave;';
 $_['text_instock']      = 'In Stock';
-$_['text_rating']       = 'Punteggio';
-$_['text_reviews']      = 'Basato su %s recensioni.';
-$_['text_summary']      = 'Sommario';
+$_['text_rating']       = 'Valutazione';
+$_['text_reviews']      = 'Basato su %s visite.';
+$_['text_summary']      = 'Descrizione';
 $_['text_weight']       = 'Peso';
 $_['text_dimension']    = 'Dimensioni (L x W x H)';
-$_['text_remove']       = 'Rimuovi';
-$_['text_compare']      = 'Confronta prodotto (%s)';
-$_['text_success']      = 'Hai aggiunto <a href="%s">%s</a> al tuo <a href="%s">Confronto dei Prodotti</a> con successo!';
-$_['text_empty']        = 'Non hai scelto nessun prodotto da comparare.';
+$_['text_compare']      = 'Confronta Prodotto (%s)';
+$_['text_success']      = 'Complimenti: Hai aggiunto <a href="%s">%s</a> ai tuoi <a href="%s"> prodotti da confrontare</a>!';
+$_['text_remove']       = 'Complimenti: Hai modificato i prodotti da confrontare!';
+$_['text_empty']        = 'Non hai scelto prodotti da confontare.';
 ?>

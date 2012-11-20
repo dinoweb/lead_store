@@ -1,7 +1,9 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading 
-$_['heading_title'] = 'Pi&ugrave; Venduti';
+$_['heading_title'] = 'Bestsellers';
 
 // Text
-$_['text_reviews']  = 'Basato su %s recensioni.'; 
+$_['text_reviews']  = 'Basato su %s giudizi.'; 
 ?>

@@ -16,5 +16,5 @@ $_['entry_sort_order']   = 'Ordina per:';
 
 // Error
 $_['error_permission']   = 'Attenzione: Non hai i permessi necessari per modificare il modulo Assegno/Vaglia/Postepay!';
-$_['error_payable']      = 'Paga a richiesto!';
+$_['error_payable']      = 'Il campo Paga a &eacute; richiesto!';
 ?>

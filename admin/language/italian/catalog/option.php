@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']       = 'Opzioni';
 
@@ -8,6 +10,7 @@ $_['text_choose']         = 'Choose';
 $_['text_select']         = 'Select';
 $_['text_radio']          = 'Radio';
 $_['text_checkbox']       = 'Checkbox';
+$_['text_image']          = 'Immagine';
 $_['text_input']          = 'Input';
 $_['text_text']           = 'Text';
 $_['text_textarea']       = 'Textarea';
@@ -15,6 +18,9 @@ $_['text_file']           = 'File';
 $_['text_date']           = 'Data';
 $_['text_datetime']       = 'Data &amp; Ora';
 $_['text_time']           = 'Ora';
+$_['text_image_manager']  = 'Gestore immagini';
+$_['text_browse']         = 'Seleziona';
+$_['text_clear']          = 'Rimuovi';
 
 // Column
 $_['column_name']         = 'Nome Opzione';
@@ -25,6 +31,7 @@ $_['column_action']       = 'Azione';
 $_['entry_name']         = 'Nome Opzione:';
 $_['entry_type']         = 'Tipo:';
 $_['entry_value']        = 'Nome Valore Opzione:';
+$_['entry_image']        = 'Immagine:';
 $_['entry_sort_order']   = 'Ordinamento:';
 
 // Error

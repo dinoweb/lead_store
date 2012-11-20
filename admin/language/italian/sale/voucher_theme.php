@@ -5,6 +5,8 @@ $_['heading_title']      = 'Temi Voucher';
 // Text
 $_['text_success']       = 'Hai modificato i temi voucher!!';
 $_['text_image_manager'] = 'Manager Immagini';
+$_['text_browse']        = 'Seleziona';
+$_['text_clear']         = 'Rimuovi';
 
 // Column
 $_['column_name']        = 'Nome Tema Voucher';

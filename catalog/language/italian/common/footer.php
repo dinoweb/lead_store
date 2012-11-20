@@ -1,19 +1,20 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
-$_['text_information']  = 'Informazione';
-$_['text_service']      = 'Servizio Cliente';
+$_['text_information']  = 'Informazioni';
+$_['text_service']      = 'Servizio clienti';
 $_['text_extra']        = 'Extra';
-$_['text_account']      = 'Account';
 $_['text_contact']      = 'Contattaci';
 $_['text_return']       = 'Restituzioni';
-$_['text_sitemap']      = 'Mappa del Sito';
-$_['text_manufacturer'] = 'Marchi';
-$_['text_voucher']      = 'Voucher Regalo';
+$_['text_sitemap']      = 'Mappa Sito';
+$_['text_manufacturer'] = 'Marche';
+$_['text_voucher']      = 'Buoni Regalo';
 $_['text_affiliate']    = 'Affiliati';
 $_['text_special']      = 'Speciali';
-$_['text_login']        = 'Login';
-$_['text_order']        = 'Storia Ordine';
-$_['text_wishlist']     = 'Lista dei Desideri';
+$_['text_account']      = 'Account';
+$_['text_order']        = 'Storico Ordini';
+$_['text_wishlist']     = 'Lista Desideri';
 $_['text_newsletter']   = 'Newsletter';
-$_['text_powered']      = 'Prodotto da <a href="http://www.opencart.com">OpenCart</a><br /> %s &copy; %s';
+$_['text_powered']      = 'Powered by <a href="http://www.lbit-solution.it">LBiT soluzioni informatiche</a><br /> %s &copy; %s';
 ?>

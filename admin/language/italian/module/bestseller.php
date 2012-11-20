@@ -4,7 +4,7 @@ $_['heading_title']       = 'Pi&ugrave; Venduti';
 
 // Text
 $_['text_module']         = 'Moduli';
-$_['text_success']        = 'Hai modificato il modulo Pi&ugrave Venduti con successo!';
+$_['text_success']        = 'Hai modificato il modulo Pi&ugrave; Venduti con successo!';
 $_['text_content_top']    = 'Contenuto Alto';
 $_['text_content_bottom'] = 'Contenuto Basso';
 $_['text_column_left']    = 'Sinistra';

@@ -11,7 +11,7 @@ $_['text_sale']          = 'Vendita';
 
 // Entry
 $_['entry_email']        = 'E-Mail:';
-$_['entry_test']         = 'Modalit&agrave test:';
+$_['entry_test']         = 'Modalit&agrave; test:';
 $_['entry_transaction']  = 'Metodo di transazione:';
 $_['entry_pdt_token']						= 'PDT Token:<br/><span class="help">Il Token per il trasferimento dati del pagamento &egrave; usato per motivi di sicurezza ed affidabilit&agrave;. Scopri come abilitare il PDT <a href="https://cms.paypal.com/us/cgi-bin/?&cmd=_render-content&content_ID=developer/howto_html_paymentdatatransfer" alt="">a questo link</a></span>';
 $_['entry_debug']							= 'Modalit&agrave; Debug:<br/><span class="help">Inserisce informazioni aggiuntive nei log di sistema.</span>';

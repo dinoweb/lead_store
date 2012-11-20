@@ -1,4 +1,6 @@
-﻿<?php
+<?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']          = 'Amministrazione';
 
@@ -10,12 +12,13 @@ $_['text_backup']            = 'Backup / Ripristina';
 $_['text_banner']           = 'Banner';
 $_['text_catalog']           = 'Catalogo';
 $_['text_category']          = 'Categorie';
-$_['text_confirm']			 = 'Questa operazione non può essere annullata. Confermi?';
+$_['text_confirm']			 = 'Questa operazione non pu� essere annullata. Confermi?';
 $_['text_country']           = 'Nazioni'; 
 $_['text_coupon']            = 'Buoni sconto';
 $_['text_currency']          = 'Valute';
 $_['text_customer']          = 'Clienti';
 $_['text_customer_group']    = 'Gruppi clienti';
+$_['text_customer_blacklist']    = 'Gruppi clienti Bloccati';
 $_['text_dashboard']         = 'Pannello strumenti';
 $_['text_design']           = 'Design';
 $_['text_download']          = 'Downloads';
@@ -41,21 +44,32 @@ $_['text_opencart']          = 'Home';
 $_['text_payment']           = 'Pagamenti';
 $_['text_product']           = 'Prodotti';
 $_['text_reports']           = 'Report';
-$_['text_report_purchased']  = 'Prodotti acquistati';
-$_['text_report_sale']       = 'Report Vendite';
-$_['text_report_viewed']     = 'Prodotti visti';
+$_['text_report_sale_order']           = 'Lista Ordini';
+$_['text_report_sale_tax']             = 'Tasse';
+$_['text_report_sale_shipping']        = 'Spedizioni';
+$_['text_report_sale_return']          = 'Restituzioni';
+$_['text_report_sale_coupon']          = 'Coupons';
+$_['text_report_product_viewed']       = 'Visualizzati';
+$_['text_report_product_purchased']    = 'Acquistati';
+$_['text_report_customer_online']      = 'Clienti On Line';
+$_['text_report_customer_order']       = 'Lista Ordini';
+$_['text_report_customer_reward']      = 'Punti Premio';
+$_['text_report_customer_credit']      = 'Crediti';
+$_['text_report_affiliate_commission'] = 'Commissioni';
 $_['text_review']            = 'Recensioni';
 $_['text_return']           = 'Restituzioni';
 $_['text_return_action']    = 'Azioni Restituzione';
 $_['text_return_reason']    = 'Ragioni Restituzione';
-$_['text_return_status']    = 'Stati delle Restituzioni';
+$_['text_return_status']    = 'Stato delle Restituzioni';
 $_['text_sale']              = 'Vendite';
 $_['text_shipping']          = 'Spedizione';
 $_['text_setting']           = 'Impostazioni';
 $_['text_stock_status']      = 'Stato magazzino';
 $_['text_support']           = 'Forum di supporto';
 $_['text_system']            = 'Sistema';
+$_['text_tax']         = 'Tasse';
 $_['text_tax_class']         = 'Classi di tassa';
+$_['text_tax_rate']         = 'Aliquote d\'imposta';
 $_['text_total']             = 'Totale Ordine';
 $_['text_user']              = 'Utente';
 $_['text_documentation']     = 'Documentazione';

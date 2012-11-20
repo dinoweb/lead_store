@@ -7,9 +7,9 @@ $_['text_payment']       = 'Pagamento';
 $_['text_success']       = 'Hai modificato con successo il modulo acquisto gratuito!';
 
 // Entry
-$_['entry_order_status'] = 'Order Status:';
-$_['entry_status']       = 'Status:';
-$_['entry_sort_order']   = 'Sort Order:';
+$_['entry_order_status'] = 'Stato Ordine:';
+$_['entry_status']       = 'Stato:';
+$_['entry_sort_order']   = 'Ordinamento:';
 
 // Error
 $_['error_permission']   = 'Attenzione: non hai i permessi per modificare il modulo acquisto gratuito!';

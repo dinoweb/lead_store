@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']         = 'Manager Immagini';
  
@@ -25,7 +27,7 @@ $_['error_default']         = 'Attenzione: impossibile modificare il tuo percors
 $_['error_delete']          = 'Attenzione: non puoi eliminare questo percorso!';
 $_['error_filename']        = 'Attenzione: il nome del file deve essere maggiore di 3 caratteri e minore di 255!';
 $_['error_missing']         = 'Attenzione: Il file o il percorso non esiste!';
-$_['error_exists']          = 'Attenzione: Un file o un percorso con lo stesso nome esiste gi&agrave!';
+$_['error_exists']          = 'Attenzione: Un file o un percorso con lo stesso nome esiste gi&agrave;!';
 $_['error_name']            = 'Attenzione: Per favore inserici un nuovo nome!';
 $_['error_move']            = 'Attenzione: Sposta nel percorso che non esiste!';
 $_['error_copy']            = 'Attenzione: impossibile copiare il file o il percorso!';

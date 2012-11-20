@@ -1,5 +1,7 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
-$_['text_title']  = 'Spedizione in base al peso del collo';
+$_['text_title']  = 'Spedizion basata sul peso';
 $_['text_weight'] = 'Peso:'; 
 ?>

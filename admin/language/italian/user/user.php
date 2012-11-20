@@ -25,6 +25,7 @@ $_['entry_captcha']    = 'Inserisci il codice nel riquadro sotto:';
 // Error
 $_['error_permission']  = 'Attenzione: non hai i permessi per modificare gli utenti!';
 $_['error_account']     = 'Attenzione: non puoi cancellare il tuo account!';
+$_['error_exists']     = 'Attenzione: lo Username &eacute; gi&agrave; utilizzato!';
 $_['error_username']    = 'Lo username deve essere lungo almeno 3 caratteri e non pi&ugrave; di 20!';
 $_['error_password']    = 'La password deve essere lunga almeno 3 caratteri e non pi&ugrave; di 20!';
 $_['error_confirm']     = 'La password e la sua conferma non coincidono!';

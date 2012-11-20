@@ -20,5 +20,5 @@ $_['entry_zone']         = 'Zona:';
 $_['error_permission']   = 'Attenzione: non hai i permessi per modificare le zone geografiche!';
 $_['error_name']         = 'Il nome della zona geografica deve essere lungo almeno 3 caratteri e non pi&ugrave; di 32!';
 $_['error_description']  = 'La descrizione deve essere lunga almeno 3 caratteri e non pi&ugrave; di 255!';
-$_['error_tax_rate']     = 'Attenzione: questa zona geografica non pu&ograve; essere cancellata perch&eacute; &egrave; assegnata ad uno o più classi di tasse!';
+$_['error_tax_rate']     = 'Attenzione: questa zona geografica non pu&ograve; essere cancellata perch&eacute; &egrave; assegnata ad uno o pi&ugrave; classi di tasse!';
 ?>

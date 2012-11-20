@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']    = 'Contributo gestione ordine';
 
@@ -9,7 +11,7 @@ $_['text_success']     = 'Supplemento per contributo gestione ordine modificato 
 // Entry
 $_['entry_total']      = 'Totale supplemento:';
 $_['entry_fee']        = 'Supplemento:';
-$_['entry_tax']        = 'Tariffe:';
+$_['entry_tax_class']        = 'Tariffe:';
 $_['entry_status']     = 'Stato:';
 $_['entry_sort_order'] = 'Ordinamento:';
 

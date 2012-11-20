@@ -13,7 +13,7 @@ $_['text_sale']          = 'Vendita';
 $_['entry_username']     = 'API Username:';
 $_['entry_password']     = 'API Password:';
 $_['entry_signature']    = 'API Firma:';
-$_['entry_test']         = 'Modalit&agrave test:<br /><span class="help">Usa il gateway server di produzione o test (sandbox) per processare le transazioni?</span>';
+$_['entry_test']         = 'Modalit&agrave; test:<br /><span class="help">Usa il gateway server di produzione o test (sandbox) per processare le transazioni?</span>';
 $_['entry_transaction']  = 'Metodo di transazione:';
 $_['entry_total']        = 'Totale:<br /><span class="help">Il totale che deve essere raggiunto per abilitare questo metodo di pagamento.</span>';
 $_['entry_order_status'] = 'Stato Ordine:';

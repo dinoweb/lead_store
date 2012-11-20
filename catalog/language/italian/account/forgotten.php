@@ -1,17 +1,17 @@
 <?php
 // Heading 
-$_['heading_title']   = 'Hai dimenticato la tua Password?';
+$_['heading_title']   = 'Hai Perso La Password?';
 
 // Text
 $_['text_account']    = 'Account';
-$_['text_forgotten']  = 'Password Dimenticata';
-$_['text_your_email'] = 'Il Tuo Indirizzo E-Mail';
-$_['text_email']      = 'Inserisci l\'e-mail associata al tuo account. Clicca su submit per ricevere la tua password tramite e-mail.';
-$_['text_success']    = 'Successo: Una nuova Password &egrave; stata inviata al tuo indirizzo e-mail.';
+$_['text_forgotten']  = 'PAssword Persa';
+$_['text_your_email'] = 'Account E-Mail';
+$_['text_email']      = 'Inserisci l\'account E-Mail associato al tuo account. Clicca su Invia per ottenere una nuova password per mail.';
+$_['text_success']    = 'Una nuova password ti &egrave; stata inviata per mail.';
 
 // Entry
-$_['entry_email']     = 'Indirizzo E-mail:';
+$_['entry_email']     = 'E-Mail Address:';
 
 // Error
-$_['error_email']     = 'Errore: L\'Indirizzo e-mail non &egrave; stato trovato nei nostri database, si prega di riprovare!';
+$_['error_email']     = 'Attenzione: La mail che hai inserito non &egrave; stata trovata nel database!';
 ?>

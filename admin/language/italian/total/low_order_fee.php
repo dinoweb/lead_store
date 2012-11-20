@@ -9,7 +9,7 @@ $_['text_success']     = 'Supplemento per ordine piccolo modificata con successo
 // Entry
 $_['entry_total']      = 'Totale ordine:';
 $_['entry_fee']        = 'Supplemento:';
-$_['entry_tax']        = 'Classe di tassa:';
+$_['entry_tax_class']        = 'Classe di tassa:';
 $_['entry_status']     = 'Stato:';
 $_['entry_sort_order'] = 'Ordinamento:';
 

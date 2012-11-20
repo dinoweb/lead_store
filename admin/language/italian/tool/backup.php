@@ -12,5 +12,6 @@ $_['entry_backup']     = 'Backup:';
 
 // Error
 $_['error_permission'] = 'Attenzione: non hai i permessi per modificare i backup!';
+$_['error_backup']     = 'Attenzione: Devi selezionare almeno una tabella per effettuare un backup!';
 $_['error_empty']      = 'Attenzione: il file che hai caricato era vuoto!';
 ?>
