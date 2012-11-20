@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
 $_['text_subject']  = '%s - Richiesta reset password';
 $_['text_greeting'] = 'Una nuova password &egrave; stata richiesta per l\'amministrazione di %s.';

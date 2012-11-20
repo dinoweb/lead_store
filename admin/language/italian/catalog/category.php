@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']     = 'Categoria';
 
@@ -6,6 +8,8 @@ $_['heading_title']     = 'Categoria';
 $_['text_success']      = 'Categorie modificate con successo!';
 $_['text_default']      = 'Predefinito';
 $_['text_image_manager']= 'Manager Immagini';
+$_['text_browse']            = 'Seleziona';
+$_['text_clear']             = 'Rimuovi';
 
 // Column
 $_['column_name']       = 'Nome categoria';
@@ -21,7 +25,7 @@ $_['entry_parent']           = 'Categoria padre:';
 $_['entry_store']            = 'Negozi:';
 $_['entry_keyword']          = 'Url SEO:<br/><span class="help">Deve essere globalmente unica.</span>';
 $_['entry_image']       = 'Immagine categoria:';
-$_['entry_top']              = 'Alto:';
+$_['entry_top']              = 'Mostra nel menu orizzontale:';
 $_['entry_column']           = 'Colonne:';
 $_['entry_sort_order']  = 'Ordinamento:<br/><span class="help">Scrivi -1 per nasconderlo.</span>';
 $_['entry_status']           = 'Stato Categoria:';

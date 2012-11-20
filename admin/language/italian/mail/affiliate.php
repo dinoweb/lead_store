@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
 $_['text_approve_subject']      = '%s - Il tuo Account Affiliato &egrave; stato attivato!';
 $_['text_approve_welcome']      = 'Benvenuto e grazie per esserti registrato su %s!';

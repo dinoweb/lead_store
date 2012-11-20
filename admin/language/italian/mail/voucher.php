@@ -1,4 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
 $_['text_subject']  = 'Ti &egrave; stato inviato un voucher regalo da %s';
 $_['text_greeting'] = 'Congratulazioni, hai ricevuto un voucher regalo del valore di %s';

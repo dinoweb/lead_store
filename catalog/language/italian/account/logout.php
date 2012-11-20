@@ -3,7 +3,7 @@
 $_['heading_title'] = 'Account Logout';
 
 // Text
-$_['text_message']  = '<p>Ti sei disconnesso dal tuo Account. &Egrave; ora sicuro lasciare il Computer.</p><p>Il tuo carrello della spesa &egrave; stato salvato, i prodotti al suo interno saranno ripristinati quando effettuerai di nuovo il login al tuo account.</p>';
+$_['text_message']  = '<p>You have been logged off your account. It is now safe to leave the computer.</p><p>Your shopping cart has been saved, the items inside it will be restored whenever you log back into your account.</p>';
 $_['text_account']  = 'Account';
 $_['text_logout']   = 'Logout';
 ?>

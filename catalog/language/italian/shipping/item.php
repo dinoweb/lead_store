@@ -1,5 +1,6 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
-$_['text_title']       = 'Per numero';
-$_['text_description'] = 'Spedizione con costo unitario per elemento';
-?>
+$_['text_title']       = 'Per Articolo';
+$_['text_description'] = 'Spedizoine calcolata ad articolo';

@@ -13,7 +13,9 @@ $_['text_balance']              = 'Saldo:';
 $_['column_name']          = 'Nome cliente';
 $_['column_email']         = 'E-Mail';
 $_['column_customer_group'] = 'Gruppo clienti';
+$_['column_customer_blacklist'] = 'Clienti Bloccati';
 $_['column_status']        = 'Stato';
+$_['column_login']          = 'Login nel Negozio';
 $_['column_approved']       = 'Approvato';
 $_['column_date_added']    = 'Data inserimento';
 $_['column_description']        = 'Descrizione';
@@ -49,6 +51,7 @@ $_['entry_description']         = 'Descrizione:';
 // Error
 $_['error_warning']             = 'Attenzione: Controlla il modulo, ci sono alcuni errori!';
 $_['error_permission']     = 'Attenzione: Non hai i permessi necessari per modificare i clienti!';
+$_['error_exists']          = 'Attenzione: l\'indirizzo e-mail indicato &eacute; gi&agrave; registrato!';
 $_['error_firstname']      = 'Il nome deve essere maggiore di 1 carattere e minore di 32!';
 $_['error_lastname']       = 'Il cognome deve essere maggiore di 1 carattere e minore di 32!';
 $_['error_email']          = 'L\'indirizzo e-mail sembra essere non valido!';

@@ -1,6 +1,6 @@
 <?php
 // Entry
-$_['entry_postcode'] = 'CAP:';
-$_['entry_country']  = 'Paese:';
-$_['entry_zone']     = 'Regione / Stato:';
+$_['entry_postcode'] = 'Post Code:';
+$_['entry_country']  = 'Country:';
+$_['entry_zone']     = 'Region / State:';
 ?>

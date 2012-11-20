@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']        = 'Prodotti';
+$_['heading_title']          = 'Prodotti'; 
 
 // Text  
 $_['text_success']         = 'Prodotti modificati con successo';
@@ -8,10 +8,12 @@ $_['text_plus']            = '+';
 $_['text_minus']           = '-';
 $_['text_default']           = 'Predefinito';
 $_['text_image_manager']   = 'Manager immagini';
+$_['text_browse']            = 'Seleziona';
+$_['text_clear']             = 'Rimuovi';
 $_['text_option']            = 'Opzioni';
 $_['text_option_value']      = 'Valore opzioni';
 $_['text_percent']           = 'Percentuale';
-$_['text_amount']            = 'Quantità Fissata';
+$_['text_amount']            = 'Importo Fisso';
 
 // Column
 $_['column_name']          = 'Nome prodotto';
@@ -30,8 +32,13 @@ $_['entry_description']    = 'Descrizione:';
 $_['entry_store']            = 'Negozi:';
 $_['entry_keyword']          = 'Url SEO:';
 $_['entry_model']          = 'Codice:';
-$_['entry_sku']            = 'SKU:';
-$_['entry_upc']              = 'UPC:';
+$_['entry_sku']              = 'SKU:<br/><span class="help">Stock Keeping Unit</span>';
+$_['entry_upc']              = 'UPC:<br/><span class="help">Universal Product Code</span>';
+$_['entry_ean']              = 'EAN:<br/><span class="help">European Article Number</span>';
+$_['entry_jan']              = 'JAN:<br/><span class="help">Japanese Article Number</span>';
+$_['entry_isbn']             = 'ISBN:<br/><span class="help">International Standard Book Number</span>';
+$_['entry_mpn']              = 'MPN:<br/><span class="help">Manufacturer Part Number</span>';
+
 $_['entry_location']       = 'Ubicazione:';
 $_['entry_manufacturer']   = 'Produttore:';
 $_['entry_shipping']       = 'Richiede spedizione:';
@@ -39,8 +46,8 @@ $_['entry_date_available'] = 'Data di disponibilit&agrave;:';
 $_['entry_quantity']       = 'Quantit&agrave;:';
 $_['entry_minimum']          = 'Quantit&agrave; minima:<br/><span class="help">forza una quantit&agrave; minima ordinabile</span>';
 $_['entry_stock_status']   = 'Stato magazzino esaurito:<br/><span class="help">Stato mostrato quando un prodotto &grave; esaurito</span>';
-$_['entry_tax_class']      = 'Classe di tassa:';
-$_['entry_price']          = 'Prezzo:';
+$_['entry_price']            = 'Prezzo:';
+$_['entry_tax_class']        = 'Classe di Tassa:';
 $_['entry_points']           = 'Punti:<br/><span class="help">Numero di punti necessari per acquitare l\'oggetto. Lascia 0 se non vuoi che il prodotto sia acquistato con i punti.</span>';
 $_['entry_option_points']    = 'Punti:';
 $_['entry_subtract']       = 'Sottrai quantit&agrave; in magazzino:';

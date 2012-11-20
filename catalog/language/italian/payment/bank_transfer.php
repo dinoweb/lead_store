@@ -1,7 +1,9 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
 $_['text_title']       = 'Bonifico Bancario';
-$_['text_instruction'] = 'Istruzioni per il Bonifico Bancario';
-$_['text_description'] = 'Si prega di trasferire l\'importo totale al seguente conto bancario.';
-$_['text_payment']     = 'Non appena riceveremo il pagamento, l\'ordine sar&agrave; evaso.';
+$_['text_instruction'] = 'Informazioni per il Bonifico Bancario';
+$_['text_description'] = 'Bonifica l\'importo sul seguente conto corrente bancario.';
+$_['text_payment']     = 'Il tuo ordine non sar&agrave; avaso fino a ricevimento del pagamento.';
 ?>

@@ -28,6 +28,7 @@ $_['entry_discount']      = 'Sconto:';
 $_['entry_logged']        = 'Login cliente:<br /><span class="help">Il cliente deve essere loggato per utilizzare i buoni sconto.</span>';
 $_['entry_shipping']      = 'Spedizione gratuita:';
 $_['entry_total']         = 'Importo totale:<br /><span class="help">L\'importo totale che deve essere raggiunto per poter utilizzare il buono sconto.</span>';
+$_['entry_category']      = 'Categoria:<br /><span class="help">Choose all products under selected category.</span>';
 $_['entry_product']       = 'Prodotti:<br /><span class="help">Seleziona specifici prodotti ai quali viene applicato il buono sconto. Non seleziare alcun prodotto per applicare a tutti i prodotti del catalogo.</span>';
 $_['entry_date_start']    = 'Data Inizio:';
 $_['entry_date_end']      = 'Data Fine:';

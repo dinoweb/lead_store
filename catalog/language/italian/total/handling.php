@@ -1,3 +1,5 @@
 <?php
-$_['text_handling'] = 'Contributo gestione ordine:';
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
+$_['text_handling'] = 'Handling Fee';
 ?>

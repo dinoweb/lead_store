@@ -1,10 +1,12 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
 $_['text_title']           = 'United Parcel Service';
-$_['text_weight']          = 'Peso:';
-$_['text_us_origin_01']    = 'UPS Il giorno dopo Aria';
-$_['text_us_origin_02']    = 'UPS 2ndo giorno Aria';
-$_['text_us_origin_03']    = 'UPS Terra';
+$_['text_weight']          = 'Weight:';
+$_['text_us_origin_01']    = 'UPS Next Day Air';
+$_['text_us_origin_02']    = 'UPS 2nd Day Air';
+$_['text_us_origin_03']    = 'UPS Ground';
 $_['text_us_origin_07']    = 'UPS Worldwide Express';
 $_['text_us_origin_08']    = 'UPS Worldwide Expedited';
 $_['text_us_origin_11']    = 'UPS Standard';
@@ -37,11 +39,7 @@ $_['text_eu_origin_86']    = 'UPS Today Express Saver';
 $_['text_eu_origin_01']    = 'UPS Next Day Air';
 $_['text_eu_origin_02']    = 'UPS 2nd Day Air';
 $_['text_eu_origin_03']    = 'UPS Ground';
-$_['text_eu_origin_07']    = 'UPS Worldwide Express';
-$_['text_eu_origin_08']    = 'UPS Worldwide Expedited';
 $_['text_eu_origin_14']    = 'UPS Next Day Air Early A.M.';
-$_['text_eu_origin_54']    = 'UPS Worldwide Express Plus';
-$_['text_eu_origin_65']    = 'UPS Saver';
 $_['text_mx_origin_07']    = 'UPS Express';
 $_['text_mx_origin_08']    = 'UPS Expedited';
 $_['text_mx_origin_54']    = 'UPS Express Plus';

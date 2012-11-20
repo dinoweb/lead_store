@@ -1,8 +1,10 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Text
-$_['text_subject']  = '%s - Programma di Affiliazione';
-$_['text_welcome']  = 'Grazie per esserti unito al Programma di Affiliazione di %s !';
-$_['text_approval'] = 'Il tuo account deve essere approvato prima che tu possa effettuare il login. Una volta approvato puoi effettuare il login usando il tuo indirizzo e-mail e la tua password visitando il nostro sito al seguente indirizzo:';
-$_['text_services'] = 'Una volta effettuato il login, sarai in grado di generare codici di tracciamento, tracciare le commissioni di pagamento e modificare le informazioni del tuo account.';
+$_['text_subject']  = '%s - Programma Affiliato';
+$_['text_welcome']  = 'Grazie per aver aderito al programma affiliati di %s!';
+$_['text_approval'] = 'Il tuo account deve essere approvato prima di poter effettuare il login. Una volta approvato &egrave; possibile accedere utilizzando il tuo indirizzo email e la password seguente URL:';
+$_['text_services'] = 'Una volta effettuato l\'accesso, si sar&agrave; in grado di generare codici di monitoraggio, monitorare i pagamenti delle commissioni e modificare le informazioni del tuo account.';
 $_['text_thanks']   = 'Grazie,';
 ?>

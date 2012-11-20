@@ -1,11 +1,15 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
 $_['heading_title']      = 'Banner';
 
 // Text
 $_['text_success']       = 'Hai modificato i banner con successo!';
 $_['text_default']       = 'Default';
-$_['text_image_manager'] = 'Gestione Immagini';
+$_['text_image_manager'] = 'Gestore Immagini';
+$_['text_browse']        = 'Seleziona';
+$_['text_clear']         = 'Rimuovi';
 
 // Column
 $_['column_name']        = 'Nome Banner';

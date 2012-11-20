@@ -55,6 +55,7 @@ $_['entry_description']         = 'Descrizione:';
 
 // Error
 $_['error_permission']          = 'Attenzione: Non hai il permesso di modificare gli affiliati!';
+$_['error_exists']              = 'Attenzione: l\'indirizzo e-mail &eacute; gi&agrave; utilizzato!';
 $_['error_firstname']           = 'Il Nome deve essere lungo dai 1 ai 32 caratteri!';
 $_['error_lastname']            = 'Il Cognome deve essere lungo dai 1 ai 32 caratteri!';
 $_['error_email']               = 'L\'indirizzo e-mail non sembra essere valido!';
@@ -63,6 +64,7 @@ $_['error_password']            = 'La Password deve essere lunga dai 3 ai 20 car
 $_['error_confirm']             = 'Le due password non coincidono!';
 $_['error_address_1']           = 'Indirizzo 1 deve essere lungo dai 3 ai 128 caratteri!';
 $_['error_city']                = 'Il nome della Citt&agrave; deve essere lungo dai 3 ai 128 caratteri!';
+$_['error_postcode']            = 'Il Codice Postale deve essere di almeno 2 e massimo 10 caratteri!';
 $_['error_country']             = 'Seleziona una nazione!';
 $_['error_zone']                = 'Seleziona una regione / stato!';
 $_['error_code']                = 'Tracking Code obbligatorio!';

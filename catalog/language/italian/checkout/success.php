@@ -1,11 +1,14 @@
 <?php
+// Traduzoine Domenico Tricarico www.lbit-solution.it
+// http://opencart.tuttoperilpc.it
 // Heading
-$_['heading_title'] = 'Il tuo Ordine &egrave; stato evaso!';
-
+$_['heading_title'] = 'Ordine elaborato correttamente!';
+$_['heading_title_customer'] = 'Il tuo ordine #%s &egrave; in lavorazione!';
 // Text
-$_['text_customer']  = '<p>Il tuo ordine &egrave; stato correttamente evaso!</p><p>Puoi vedere la storia del tuo ordine andando sulla pagina <a href="%s">Il Mio Account</a> cliccando su <a href="%s">Storia</a>.</p>Se l\'acquisto ha un download associato, puoi andare alla pagina <a href="%s">Downloads</a> per vederlo.<p></p><p>Se hai qualche domanda, per favore <a href="%s">contattaci</a>.</p><p>Grazie per aver acquistato sul nostro sito!</p>';
-$_['text_guest']    = '<p>Il tuo ordine &egrave; stato correttamente evaso!</p><p>Se hai qualche domanda, per favore <a href="%s">contattaci</a>.</p><p>Grazie per aver acquistato sul nostro sito!</p>';
-$_['text_basket']   = 'Cestino';
-$_['text_checkout'] = 'Acquisto';
-$_['text_success']  = 'Successo';
+$_['text_customer'] = '<p>Il tuo ordine <a href="%s">#%s</a> &egrave; stato elaborato correttamente!</p><p>&Egrave; possibile visualizzare la cronologia degli ordini andando nella pagina del <a href="%s">tuo account</a> e cliccando su <a href="%s">storico</a>.</p><p>Se il vostro acquisto &egrave; associato un download, si pu&ograve; andare alla pagina <a href="%s">downloads</a> per vederli.</p><p>Si prega di indirizzare tutte le vostre domande al <a href="%s">proprietario del negozio</a>.</p><p>Grazie per aver acquistato sul nostro negozio!</p>';
+$_['text_guest']    = '<p>Il tuo ordine #%s &egrave; stato elaborato correttamente!</p><p>Si prega di indirizzare tutte le vostre domande al <a href="%s">proprietario del negozio</a>.</p><p>Grazie per aver acquistato sul nostro negozio!</p>';
+
+$_['text_basket']   = 'Carrello';
+$_['text_checkout'] = 'Cassa';
+$_['text_success']  = 'Esito positivo';
 ?>
