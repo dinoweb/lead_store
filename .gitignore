@@ -9,3 +9,6 @@ image/cache/*.jpg
 image/cache/data/*
 system/cache
 system/logs
+
+vqmod/mods.cache
+vqmod/vqcache
