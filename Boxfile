@@ -12,6 +12,7 @@ web1:
     - download/
     - image/
     - vqmod/cache
+    - vqmod/logs
   after_build:
     - "mv pagoda/system/database/mysql.php system/database/mysql.php"
     - "mv pagoda/admin/config.php admin/config.php"
