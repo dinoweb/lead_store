@@ -11,11 +11,10 @@ web1:
     - system/logs/
     - download/
     - image/
-    - vqmod/
+    - vqmod/cache
   after_build:
     - "mv pagoda/system/database/mysql.php system/database/mysql.php"
     - "mv pagoda/admin/config.php admin/config.php"
     - "mv pagoda/config.php config.php"
-    - "cp -rv pagoda/vqmod/* vqmod/"
 db1:
   name: openCart
