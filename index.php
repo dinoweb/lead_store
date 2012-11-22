@@ -1,31 +1,34 @@
 <?php
+/* ---------------------------------------------------------------------------------- */
+/*  OpenCart index.php (with modififications for the override feature)                */
+/*                                                                                    */
+/*  Original file Copyright © 2012 by Daniel Kerr (www.opencart.com)                  */
+/*  Modifications Copyright © 2012 by SuporteOn (www.suporteon.com)                   */
+/*                                                                                    */
+/*  This file is part of OpenCart.                                                    */
+/*                                                                                    */
+/*  OpenCart is free software: you can redistribute it and/or modify                  */
+/*  it under the terms of the GNU General Public License as published by              */
+/*  the Free Software Foundation, either version 3 of the License, or                 */
+/*  (at your option) any later version.                                               */
+/*                                                                                    */
+/*  OpenCart is distributed in the hope that it will be useful,                       */
+/*  but WITHOUT ANY WARRANTY; without even the implied warranty of                    */
+/*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                     */
+/*  GNU General Public License for more details.                                      */
+/*                                                                                    */
+/*  You should have received a copy of the GNU General Public License                 */
+/*  along with OpenCart.  If not, see <http://www.gnu.org/licenses/>.                 */
+/* ---------------------------------------------------------------------------------- */
+error_reporting(E_ALL);
+ini_set('display_errors','On');
 // Version
 define('VERSION', '1.5.4');
 
-// Configuration
-require_once('config.php');
-   
-// Install 
-if (!defined('DIR_APPLICATION')) {
-	header('Location: install/index.php');
-	exit;
-}
+require_once ('fdt_tools/fdtLoader.php');
 
-// VirtualQMOD
-require_once('./vqmod/vqmod.php');
-$vqmod = new VQMod();
+$fdtLoader = new fdtLoader ();
 
-// VQMODDED Startup
-require_once($vqmod->modCheck(DIR_SYSTEM . 'startup.php'));
-
-// Application Classes
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/customer.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/affiliate.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/currency.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/tax.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/weight.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/length.php'));
-require_once($vqmod->modCheck(DIR_SYSTEM . 'library/cart.php'));
 
 // Registry
 $registry = new Registry();
@@ -38,7 +41,7 @@ $registry->set('load', $loader);
 $config = new Config();
 $registry->set('config', $config);
 
-// Database 
+// Database
 $db = new DB(DB_DRIVER, DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 $registry->set('db', $db);
 
@@ -54,7 +57,7 @@ if ($store_query->num_rows) {
 } else {
 	$config->set('config_store_id', 0);
 }
-		
+
 // Settings
 $query = $db->query("SELECT * FROM " . DB_PREFIX . "setting WHERE store_id = '0' OR store_id = '" . (int)$config->get('config_store_id') . "' ORDER BY store_id ASC");
 
@@ -68,20 +71,20 @@ foreach ($query->rows as $setting) {
 
 if (!$store_query->num_rows) {
 	$config->set('config_url', HTTP_SERVER);
-	$config->set('config_ssl', HTTPS_SERVER);	
+	$config->set('config_ssl', HTTPS_SERVER);
 }
 
 // Url
-$url = new Url($config->get('config_url'), $config->get('config_use_ssl') ? $config->get('config_ssl') : $config->get('config_url'));	
+$url = new Url($config->get('config_url'), $config->get('config_use_ssl') ? $config->get('config_ssl') : $config->get('config_url'));
 $registry->set('url', $url);
 
-// Log 
+// Log
 $log = new Log($config->get('config_error_filename'));
 $registry->set('log', $log);
 
 function error_handler($errno, $errstr, $errfile, $errline) {
 	global $log, $config;
-	
+
 	switch ($errno) {
 		case E_NOTICE:
 		case E_USER_NOTICE:
@@ -99,43 +102,43 @@ function error_handler($errno, $errstr, $errfile, $errline) {
 			$error = 'Unknown';
 			break;
 	}
-		
+
 	if ($config->get('config_error_display')) {
 		echo '<b>' . $error . '</b>: ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b>';
 	}
-	
+
 	if ($config->get('config_error_log')) {
 		$log->write('PHP ' . $error . ':  ' . $errstr . ' in ' . $errfile . ' on line ' . $errline);
 	}
 
 	return true;
 }
-	
+
 // Error Handler
 set_error_handler('error_handler');
 
 // Request
 $request = new Request();
 $registry->set('request', $request);
- 
+
 // Response
 $response = new Response();
 $response->addHeader('Content-Type: text/html; charset=utf-8');
 $response->setCompression($config->get('config_compression'));
-$registry->set('response', $response); 
-		
+$registry->set('response', $response);
+
 // Cache
 $cache = new Cache();
-$registry->set('cache', $cache); 
+$registry->set('cache', $cache);
 
 // Session
 $session = new Session();
-$registry->set('session', $session); 
+$registry->set('session', $session);
 
 // Language Detection
 $languages = array();
 
-$query = $db->query("SELECT * FROM " . DB_PREFIX . "language WHERE status = '1'"); 
+$query = $db->query("SELECT * FROM " . DB_PREFIX . "language WHERE status = '1'");
 
 foreach ($query->rows as $result) {
 	$languages[$result['code']] = $result;
@@ -143,9 +146,9 @@ foreach ($query->rows as $result) {
 
 $detect = '';
 
-if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && ($request->server['HTTP_ACCEPT_LANGUAGE'])) { 
+if (isset($request->server['HTTP_ACCEPT_LANGUAGE']) && ($request->server['HTTP_ACCEPT_LANGUAGE'])) {
 	$browser_languages = explode(',', $request->server['HTTP_ACCEPT_LANGUAGE']);
-	
+
 	foreach ($browser_languages as $browser_language) {
 		foreach ($languages as $key => $value) {
 			if ($value['status']) {
@@ -173,20 +176,20 @@ if (!isset($session->data['language']) || $session->data['language'] != $code) {
 	$session->data['language'] = $code;
 }
 
-if (!isset($request->cookie['language']) || $request->cookie['language'] != $code) {	  
+if (!isset($request->cookie['language']) || $request->cookie['language'] != $code) {
 	setcookie('language', $code, time() + 60 * 60 * 24 * 30, '/', $request->server['HTTP_HOST']);
-}			
+}
 
 $config->set('config_language_id', $languages[$code]['language_id']);
 $config->set('config_language', $languages[$code]['code']);
 
-// Language	
+// Language
 $language = new Language($languages[$code]['directory']);
-$language->load($languages[$code]['filename']);	
-$registry->set('language', $language); 
+$language->load($languages[$code]['filename']);
+$registry->set('language', $language);
 
 // Document
-$registry->set('document', new Document()); 		
+$registry->set('document', new Document());
 
 // Customer
 $registry->set('customer', new Customer($registry));
@@ -197,7 +200,7 @@ $registry->set('affiliate', new Affiliate($registry));
 if (isset($request->get['tracking']) && !isset($request->cookie['tracking'])) {
 	setcookie('tracking', $request->get['tracking'], time() + 3600 * 24 * 1000, '/');
 }
-		
+
 // Currency
 $registry->set('currency', new Currency($registry));
 
@@ -215,16 +218,16 @@ $registry->set('cart', new Cart($registry));
 
 //  Encryption
 $registry->set('encryption', new Encryption($config->get('config_encryption')));
-		
-// Front Controller 
+
+// Front Controller
 $controller = new Front($registry);
 
 // Maintenance Mode
 $controller->addPreAction(new Action('common/maintenance'));
 
 // SEO URL's
-$controller->addPreAction(new Action('common/seo_url'));	
-	
+$controller->addPreAction(new Action('common/seo_url'));
+
 // Router
 if (isset($request->get['route'])) {
 	$action = new Action($request->get['route']);
