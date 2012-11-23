@@ -58,7 +58,6 @@ final class VQMod {
 	 * @description Checks if a file has modifications and applies them, returning cache files or the file name
 	 */
 	public function modCheck($sourceFile) {
-
 		if(!$this->_folderChecks) {
 
 			if($this->logging) {
@@ -82,6 +81,7 @@ final class VQMod {
 		} else {
 			$sourcePath = $this->_realpath($sourceFile);
 		}
+
 
 		if(!$sourcePath || !file_exists($sourcePath) || is_dir($sourcePath) || in_array($sourcePath, $this->_doNotMod)) {
 			return $sourceFile;
@@ -153,10 +153,10 @@ final class VQMod {
 
 	/**
 	 * VQMod::dirCheck()
-	 * 
+	 *
 	 * @param string $path
 	 * @return null
-	 * @description Creates $path folder if it doesn't exist 
+	 * @description Creates $path folder if it doesn't exist
 	 */
 	public function dirCheck($path) {
 		if(!is_dir($path)) {
@@ -280,7 +280,7 @@ final class VQMod {
 
 	/**
 	 * VQMod::_realpath()
-	 * 
+	 *
 	 * @param string $file
 	 * @return string
 	 * @description Returns real path of any path, adding directory slashes if necessary
@@ -307,11 +307,15 @@ final class VQMod {
 	 * @description Checks a modification path against a file path
 	 */
 	private function _checkMatch($modFilePath, $checkFilePath) {
+
 		$modFilePath = str_replace('\\', '/', $modFilePath);
 		$checkFilePath = str_replace('\\', '/', $checkFilePath);
 
-		$modFilePath = preg_replace('/([^*]+)/e', 'preg_quote("$1", "~")', $modFilePath);
-		$modFilePath = str_replace('*', '[^/]*', $modFilePath);
+
+
+		$modFilePath = preg_replace('/([^*?]+)/e', 'preg_quote("$1", "~")', $modFilePath);
+		$modFilePath = str_replace('*?', '(.*?)', $modFilePath);
+		$modFilePath = str_replace('*/', '[^/]*/', $modFilePath);
 		$return = (bool) preg_match('~^' . $modFilePath . '$~', $checkFilePath);
 		return $return;
 
@@ -523,7 +527,7 @@ class VQModObject {
 						}
 						break;
 					}
-					
+
 					if($mod['search']->regex == 'true') {
 						$pos = @preg_match($mod['search']->getContent(), $line);
 						if($pos === false) {

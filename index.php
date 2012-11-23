@@ -25,9 +25,14 @@ ini_set('display_errors','On');
 // Version
 define('VERSION', '1.5.4');
 
-require_once ('fdt_tools/fdtLoader.php');
+// VirtualQMOD
+require_once('./vqmod/vqmod.php');
+$vqmod = new VQMod();
 
-$fdtLoader = new fdtLoader ();
+//FDT LOADER
+require_once ('fdt_tools/fdtLoader.php');
+$fdtLoader = new fdtLoader (false, $vqmod);
+
 
 
 // Registry

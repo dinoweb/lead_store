@@ -10,7 +10,7 @@
 		</operation>
 	</file>
 
-	<file name="system/engine/controller.php">
+	<file name="*?system/engine/controller.php">
 		<operation error="skip">
 			<search position="replace"><![CDATA[$action->getFile()]]></search>
 			<add><![CDATA[$vqmod->modCheck($action->getFile())]]></add>
@@ -45,7 +45,7 @@
 		</operation>
 	</file>
 
-	<file name="system/engine/front.php">
+	<file name="*?system/engine/front.php">
 		<operation error="skip">
 			<search position="replace"><![CDATA[$action->getFile()]]></search>
 			<add><![CDATA[$vqmod->modCheck($action->getFile())]]></add>
@@ -56,22 +56,22 @@
 		</operation>
 	</file>
 
-	<file name="system/engine/loader.php">
+	<file name="*?system/engine/loader.php">
 		<operation>
 			<search position="before"><![CDATA[if (file_exists($file)) {]]></search>
 			<add><![CDATA[global $vqmod; $file = $vqmod->modCheck($file);]]></add>
 		</operation>
 	</file>
-	
-	<file name="system/library/language.php">
+
+	<file name="*?system/library/language.php">
 		<operation error="skip">
 			<search position="replace" regex="true"><![CDATA[~require\((\$default|\$file)\);~]]></search>
 			<add><![CDATA[global $vqmod;
 			require($vqmod->modCheck($1));]]></add>
 		</operation>
 	</file>
-	
-	<file name="system/library/template.php">
+
+	<file name="*?system/library/template.php">
 		<operation>
 			<search position="before"><![CDATA[file_exists($file)]]></search>
 			<add><![CDATA[global $vqmod; $file = $vqmod->modCheck($file);]]></add>

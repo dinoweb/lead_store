@@ -1,17 +1,20 @@
 <?php
 
+
 class fdtLoader {
 
     private $localDirName;
     private $localDirPath;
     private $documentRoot;
     private $isAdmin;
+    private $vqmod;
 
-    public function __construct($isAdmin = false, $enviorment = 'prod', $localDirName = 'local')
+    public function __construct($isAdmin = false, $vqmod, $enviorment = 'prod', $localDirName = 'local')
     {
         $this->isAdmin = $isAdmin;
         $this->localDirName = $localDirName;
         $this->documentRoot = $_SERVER['DOCUMENT_ROOT'];
+        $this->vqmod = $vqmod;
 
         switch ($enviorment)
         {
@@ -24,6 +27,11 @@ class fdtLoader {
             break;
 
         }
+    }
+
+    public function getVqmodObject()
+    {
+        return $this->vqmod;
     }
 
     private function getLocalDirName()
@@ -106,6 +114,7 @@ class fdtLoader {
 
     }
 
+
     private function includeConfiguration ()
     {
         $localDirPath = $this->getLocalDirPath();
@@ -173,306 +182,73 @@ class fdtLoader {
         return ($arraySystemClasses[$type]);
     }
 
+    private function getAbsoluteClassPath ($relativeClassPath)
+    {
+        $localSystemDir = $this->getSystemClass('local');
+        $mainSystemDir = $this->getSystemClass('main');
+
+
+        if (file_exists($localSystemDir . $relativeClassPath))
+        {
+            return ($localSystemDir . $relativeClassPath);
+
+        }
+        else
+        {
+            return ($this->getLibDir('main', 'system') . $relativeClassPath);
+        }
+    }
+
+    private function requireClass ($relativeClassPath)
+    {
+        $vqmod = $this->getVqmodObject ();
+
+        $absoluteClassPath = $this->getAbsoluteClassPath ($relativeClassPath);
+
+        require_once($vqmod->modCheck($absoluteClassPath));
+
+    }
+
+
     private function includeClasses ()
     {
         // Startup
         $localSystemDir = $this->getSystemClass('local');
         $mainSystemDir = $this->getSystemClass('main');
 
+        $this->requireClass ('startup.php');
+        $this->requireClass ('library/customer.php');
+        $this->requireClass ('library/affiliate.php');
+        $this->requireClass ('library/currency.php');
+        $this->requireClass ('library/tax.php');
+        $this->requireClass ('library/weight.php');
+        $this->requireClass ('library/length.php');
+        $this->requireClass ('library/cart.php');
+        $this->requireClass ('library/user.php');
+        $this->requireClass ('helper/json.php');
+        $this->requireClass ('helper/utf8.php');
+        $this->requireClass ('engine/action.php');
+        $this->requireClass ('engine/controller.php');
+        $this->requireClass ('engine/front.php');
+        $this->requireClass ('engine/loader.php');
+        $this->requireClass ('engine/model.php');
+        $this->requireClass ('engine/registry.php');
+        $this->requireClass ('library/cache.php');
+        $this->requireClass ('library/url.php');
+        $this->requireClass ('library/config.php');
+        $this->requireClass ('library/db.php');
+        $this->requireClass ('library/document.php');
+        $this->requireClass ('library/encryption.php');
+        $this->requireClass ('library/image.php');
+        $this->requireClass ('library/language.php');
+        $this->requireClass ('library/log.php');
+        $this->requireClass ('library/mail.php');
+        $this->requireClass ('library/pagination.php');
+        $this->requireClass ('library/request.php');
+        $this->requireClass ('library/response.php');
+        $this->requireClass ('library/session.php');
+        $this->requireClass ('library/template.php');
 
-        if (file_exists($localSystemDir . 'startup.php'))
-        {
-            require_once($localSystemDir . 'startup.php');
-        }
-        else
-        {
-            require_once($this->getLibDir('main', 'system') . 'startup.php');
-        }
-
-        // Application Classes
-        if (file_exists($localSystemDir . 'library/customer.php'))
-        {
-            require_once($localSystemDir . 'library/customer.php');
-        }
-        else
-        {
-            require_once($this->getLibDir('main', 'system') . 'library/customer.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/affiliate.php'))
-        {
-            require_once($localSystemDir . 'library/affiliate.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/affiliate.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/currency.php'))
-        {
-            require_once($localSystemDir . 'library/currency.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/currency.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/tax.php'))
-        {
-            require_once($localSystemDir . 'library/tax.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/tax.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/weight.php'))
-        {
-            require_once($localSystemDir . 'library/weight.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/weight.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/length.php'))
-        {
-            require_once($localSystemDir . 'library/length.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/length.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/cart.php'))
-        {
-            require_once($localSystemDir . 'library/cart.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/cart.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/user.php'))
-        {
-            require_once($localSystemDir . 'library/user.php');
-
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/user.php');
-        }
-
-
-        // Helper
-        if (file_exists($localSystemDir . 'helper/json.php'))
-        {
-            require_once($localSystemDir . 'helper/json.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'helper/json.php');
-        }
-
-        if (file_exists($localSystemDir . 'helper/utf8.php'))
-        {
-            require_once($localSystemDir . 'helper/utf8.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'helper/utf8.php');
-        }
-
-        // Engine
-        if (file_exists($localSystemDir . 'engine/action.php'))
-        {
-            require_once($localSystemDir . 'engine/action.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/action.php');
-        }
-
-        if (file_exists($localSystemDir . 'engine/controller.php'))
-        {
-            require_once($localSystemDir . 'engine/controller.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/controller.php');
-        }
-
-        if (file_exists($localSystemDir . 'engine/front.php'))
-        {
-            require_once($localSystemDir . 'engine/front.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/front.php');
-        }
-
-        if (file_exists($localSystemDir . 'engine/loader.php'))
-        {
-            require_once($localSystemDir . 'engine/loader.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/loader.php');
-        }
-
-        if (file_exists($localSystemDir . 'engine/model.php'))
-        {
-            require_once($localSystemDir . 'engine/model.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/model.php');
-        }
-
-        if (file_exists($localSystemDir . 'engine/registry.php'))
-        {
-            require_once($localSystemDir . 'engine/registry.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'engine/registry.php');
-        }
-
-        // Common
-        if (file_exists($localSystemDir . 'library/cache.php'))
-        {
-            require_once($localSystemDir . 'library/cache.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/cache.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/url.php'))
-        {
-            require_once($localSystemDir . 'library/url.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/url.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/config.php'))
-        {
-            require_once($localSystemDir . 'library/config.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/config.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/db.php'))
-        {
-            require_once($localSystemDir . 'library/db.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/db.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/document.php'))
-        {
-            require_once($localSystemDir . 'library/document.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/document.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/encryption.php'))
-        {
-            require_once($localSystemDir . 'library/encryption.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/encryption.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/image.php'))
-        {
-            require_once($localSystemDir . 'library/image.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/image.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/language.php'))
-        {
-            require_once($localSystemDir . 'library/language.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/language.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/log.php'))
-        {
-            require_once($localSystemDir . 'library/log.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/log.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/mail.php'))
-        {
-            require_once($localSystemDir . 'library/mail.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/mail.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/pagination.php'))
-        {
-            require_once($localSystemDir . 'library/pagination.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/pagination.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/request.php'))
-        {
-            require_once($localSystemDir . 'library/request.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/request.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/response.php'))
-        {
-            require_once($localSystemDir . 'library/response.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/response.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/session.php'))
-        {
-            require_once($localSystemDir . 'library/session.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/session.php');
-        }
-
-        if (file_exists($localSystemDir . 'library/template.php'))
-        {
-            require_once($localSystemDir . 'library/template.php');
-        }
-        else
-        {
-            require_once($mainSystemDir . 'library/template.php');
-        }
     }
 
 
