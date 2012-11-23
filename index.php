@@ -34,7 +34,6 @@ require_once ('fdt_tools/fdtLoader.php');
 $fdtLoader = new fdtLoader (false, $vqmod);
 
 
-
 // Registry
 $registry = new Registry();
 
@@ -237,12 +236,4 @@ $controller->addPreAction(new Action('common/seo_url'));
 if (isset($request->get['route'])) {
 	$action = new Action($request->get['route']);
 } else {
-	$action = new Action('common/home');
-}
-
-// Dispatch
-$controller->dispatch($action, new Action('error/not_found'));
-
-// Output
-$response->output();
-?>
+	$action =
