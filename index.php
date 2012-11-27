@@ -25,8 +25,9 @@ ini_set('display_errors','On');
 // Version
 define('VERSION', '1.5.4');
 
+
 // VirtualQMOD
-require_once('./vqmod/vqmod.php');
+require_once('/mnt/storage/libraries/opencart_v1.5.4.1/upload/vqmod/vqmod.php');
 $vqmod = new VQMod();
 
 //FDT LOADER
@@ -236,4 +237,12 @@ $controller->addPreAction(new Action('common/seo_url'));
 if (isset($request->get['route'])) {
 	$action = new Action($request->get['route']);
 } else {
-	$action =
+	$action = new Action('common/home');
+}
+
+// Dispatch
+$controller->dispatch($action, new Action('error/not_found'));
+
+// Output
+$response->output();
+?>

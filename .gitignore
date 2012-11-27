@@ -4,15 +4,10 @@ admin/config.php
 !index.html
 
 download
+image/data
 image/flags
 image/cache/*.jpg
 image/cache/data/*
-system/cache
-system/logs
-
-vqmod/mods.cache
-vqmod/vqcache
-<<<<<<< HEAD
-vqmod/logs
-=======
->>>>>>> f5210fa1fd80886bf26de232ce24cadc4f72f766
+cache
+logs
+zzz_avanzi

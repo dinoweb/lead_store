@@ -14,6 +14,8 @@ class fdtLoader {
         $this->isAdmin = $isAdmin;
         $this->localDirName = $localDirName;
         $this->documentRoot = $_SERVER['DOCUMENT_ROOT'];
+        $this->opencartVersion = 'v1.5.4.1';
+        $this->opencartDir = '/mnt/storage/libraries/opencart_'.$this->opencartVersion.'/upload';
         $this->vqmod = $vqmod;
 
         switch ($enviorment)
@@ -48,6 +50,15 @@ class fdtLoader {
         return $this->documentRoot;
     }
 
+    private function getOpencartDir($hasSlash = false)
+    {
+        if ($hasSlash)
+        {
+            return $this->opencartDir.DIRECTORY_SEPARATOR;
+        }
+        return $this->opencartDir;
+    }
+
     private function getLocalDirPath ()
     {
         return $this->getDocumentRoot()  . DIRECTORY_SEPARATOR . $this->getLocalDirName() . DIRECTORY_SEPARATOR;
@@ -69,14 +80,15 @@ class fdtLoader {
 
         }
 
-        return $this->getDocumentRoot(true);
+        return $this->getOpencartDir(true);
 
     }
 
     private function setGlobalsDir ($type = 'main')
     {
         $string = '';
-        $path = $this->getDocumentRoot(true);
+        $path = $this->getOpencartDir(true);
+        $documentRoot = $this->getDocumentRoot(true);
 
         if ($type == 'local')
         {
@@ -98,17 +110,18 @@ class fdtLoader {
             define('DIR'.$string.'_APPLICATION', $path.'catalog/');
             define('DIR'.$string.'_TEMPLATE', $path.'catalog/view/theme/');
             define('DIR'.$string.'_LANGUAGE', $path.'catalog/language/');
+
         }
 
+        define('DIR'.$string.'_CACHE', $documentRoot.'cache/');
+        define('DIR'.$string.'_IMAGE', $documentRoot.'image/');
+        define('DIR'.$string.'_LOGS', $documentRoot.'logs/');
+        define('DIR'.$string.'_DOWNLOAD', $documentRoot.'download/');
 
 
         define('DIR'.$string.'_SYSTEM', $path.'system/');
         define('DIR'.$string.'_DATABASE', $path.'system/database/');
         define('DIR'.$string.'_CONFIG', $path.'system/config/');
-        define('DIR'.$string.'_IMAGE', $path.'image/');
-        define('DIR'.$string.'_CACHE', $path.'system/cache/');
-        define('DIR'.$string.'_DOWNLOAD', $path.'download/');
-        define('DIR'.$string.'_LOGS', $path.'system/logs/');
         define('DIR'.$string.'_CATALOG', $path.'/catalog/');
 
 
@@ -151,7 +164,7 @@ class fdtLoader {
 
     private function getLibDir ($type = 'local', $toBeReturned)
     {
-        $path = $this->getDocumentRoot(true);
+        $path = $this->getOpencartDir(true);
         if ($type == 'local')
         {
             $path = $this->getLocalDirPath();
