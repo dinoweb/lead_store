@@ -1,0 +1,46 @@
+<modification>
+
+	<id>Store monopagina</id>
+	<version>153.1</version>
+	<vqmver>2.1.5</vqmver>
+	<author>FucinaDelTag</author>
+
+	<file name="catalog/view/theme/*/template/checkout/cart.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[<a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>]]></search>
+			<add><![CDATA[<?php echo $product['name']; ?>]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/checkout/cart.tpl">
+		<operation error="skip">
+			<search position="replace"><![CDATA[<td class="image"><?php echo $column_image; ?></td>]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/checkout/cart.tpl">
+		<operation error="skip">
+			<search position="replace" offset="2"><![CDATA[<td class="image"><?php if ($product['thumb']) { ?>]]></search>
+			<add><![CDATA[]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/common/header.php">
+		<operation error="skip">
+			<search position="replace"><![CDATA[$this->url->link('product/category', 'path=' . $category['category_id'])]]></search>
+			<add><![CDATA['#'.$category['category_id']]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/common/home.php">
+		<operation error="skip">
+			<search position="after"><![CDATA['common/content_top',]]></search>
+			<add><![CDATA['product/listAllProduct',]]></add>
+		</operation>
+	</file>
+
+
+
+
+</modification>

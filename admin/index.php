@@ -5,7 +5,7 @@ ini_set('display_errors','On');
 define('VERSION', '1.5.4');
 
 // VirtualQMOD
-require_once('/mnt/storage/libraries/opencart_v1.5.4.1/upload/vqmod/vqmod.php');
+require_once('../fdt_tools/myVqmod.php');
 $vqmod = new VQMod();
 
 //FDT LOADER
