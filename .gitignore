@@ -9,7 +9,7 @@ image/flags
 image/cache/*.jpg
 image/cache/data/*
 cache
-vqmod/vqcache/*
 vqmod/mods.cache
+vqmod/vqcache
 logs
 zzz_avanzi
